@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import DATA from './Pages/DATA';
 import Kitchenessentials from './Pages/Kitchenessentials'
@@ -7,6 +7,9 @@ import More from './Pages/More';
 import Addmore  from './Pages/Addmore';
 import HomeData from './HomeData';
 import  YourB from './Pages/YourB'
+import instance from './Componetus/axios';
+// import Product from './Prodcut';
+
 function Home() {
   const images = [
     'https://m.media-amazon.com/images/I/81BKxaj0USL._SX3000_.jpg',
@@ -18,6 +21,9 @@ function Home() {
     
   ];
 
+    
+
+
   const [next, setNext] = useState(0);
 
   const handleNext = () => {
@@ -28,6 +34,10 @@ function Home() {
     setNext((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
+  
+  
+  
+  
   return (
     <>
      
@@ -64,6 +74,19 @@ function Home() {
      
         <HomeData  />
          <YourB/>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
        
       
     </>

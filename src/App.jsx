@@ -18,6 +18,9 @@ import Addmore from './Pages/Addmore';
 import HomeData from './HomeData';
 import Product from './Prodcut';
 import YourB from './Pages/YourB';
+// import Singleproduct from './Singleprodcut';
+import CartProvider from './Componetus/CartContext';
+import SingleProduct from './Singleprodcut';
 // import HomeBanner from './Pages/HomeBanner';
 
 
@@ -62,12 +65,14 @@ const router = createBrowserRouter([
         path:"/Addmore",
         element: <Addmore/>
       },{
-        path:"/HomeData",
+        path:"/",
         element: <HomeData />
-      },{
-        path : "/product/:id" ,
-        element: <Product />
       },
+      ,{
+        path : "/product/:id",element: <SingleProduct />
+      },
+      
+      
       {
         path:"/YourB",
         element: <YourB/>
@@ -97,7 +102,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
+       <CartProvider>
     <RouterProvider router={router} />
+       </CartProvider>
   )
 }
 

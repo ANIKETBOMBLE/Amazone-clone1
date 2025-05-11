@@ -9,7 +9,7 @@ function DATA() {
   return (
     
     <>
-    <Link to='*'> 
+    {/* <Link to=''>  */}
  <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6  absolute top-95   ">
   {productData.map((product, index) => (
     <div
@@ -39,7 +39,7 @@ function DATA() {
   ))}
   
 </div>
-</Link>
+
     
     </>
   )

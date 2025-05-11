@@ -43,7 +43,7 @@ function Return() {
        <div className="flex items-center justify-start gap-1">
       <h2> <b>1 order </b> placed in </h2> 
       <select name="Months" id="" className='border p-2 rounded ' >
-        <option value="past 3 months" selected disabled >past 3 months</option>
+        <option defaultValue="past 3 months"  >past 3 months</option>
         <option value="last 30 days">last 30 days</option>
         <option value="2025">2025</option>
         <option value="2024">2024</option>
@@ -66,7 +66,7 @@ function Return() {
 </h2>
       <span>SHIP TO 
         <select name="Aniket Manoj bomble" className='p-1 border  rounded ' id="">
-          <option value="" selected disabled>address</option>
+          {/* <option defaultvalue >address</option> */}
          </select></span>
       </div>
      
@@ -117,7 +117,7 @@ Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) <br />| Global Debut  SD 4s 
       
     </div>
     
-    <div className="siddiv  w-100 h-60 border right-10 top-1/2 ">
+    <div className="siddiv absolute   w-80 h-60 border right-1 top-100 rounded-2xl p-2 ">
        <h2 className='font-bold'>Customers also bought <br /> these digital items </h2> 
 
     <div className=" flex justify-between items-center">
