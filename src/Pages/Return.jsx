@@ -8,33 +8,7 @@ function Return() {
   return (
     <>
     
-    {/* <div class="max-w-4xl mx-auto p-6">
-  <h1 class="text-2xl font-bold mb-6">Your Orders</h1>
-
-  <div class="space-y-6">
-
-    <div class="border rounded-xl shadow-sm p-4 hover:shadow-md transition">
-      <div class="flex justify-between items-center mb-3">
-        <div>
-          <p class="text-sm text-gray-500">Order #123456789</p>
-          <p class="text-sm text-gray-500">Placed on April 25, 2025</p>
-        </div>
-        <span class="text-sm px-2 py-1 bg-green-100 text-green-700 rounded-full">Delivered</span>
-      </div>
-      <div class="flex items-center space-x-4">
-        <img src="https://via.placeholder.com/60" alt="Product" class="w-16 h-16 rounded border" />
-        <div>
-          <p class="font-medium text-gray-800">Wireless Headphones</p>
-          <p class="text-sm text-gray-500">Qty: 1</p>
-        </div>
-      </div>
-      <div class="mt-4 text-right">
-        <a href="#" class="text-sm text-blue-600 hover:underline">View Details</a>
-      </div>
-    </div>
-
-  </div>
-</div> */}
+    
 <div className="">
   <div className="">
       <Link className='flex gap-2 items-center' to="/Profile"> Your Account <BiSolidChevronRight />  <span className='text-red-600'> Your Orders</span></Link>
@@ -49,6 +23,7 @@ function Return() {
 
     </div>
     </div>
+    
     <div className="flex justify-center items-center flex-col ">
        <u className='list-none no-underline flex gap-4 '>
       <li className='underline decoration-orange-600 decoration-2 underline-offset-2 font-bold text-black'>Orders</li>
@@ -58,8 +33,14 @@ function Return() {
     </u>
    {/* <hr className="border-t border-gray-700 my-4" /> */}
     </div>
+    
+    
+    {/*  */}
     <div className="h-px bg-gray-300 my-4 w-full" />
-    <div className="flex items-center justify-center gap-1">
+    {/* its just line */}
+    
+    <div className='flex flex-col justify-center items-center m-6'>
+       <div className="flex items-center justify-start gap-1">
       <h2> <b>1 order </b> placed in </h2> 
       <select name="Months" id="" className='border p-2 rounded ' >
         <option value="past 3 months" selected disabled >past 3 months</option>
@@ -76,11 +57,11 @@ function Return() {
 
       </select>
     </div>
-    <div className="flex items-center justify-around w-20vw   h-20 bg-gray-300 place-content-center mt-2  ">
+    <div className="flex items-center justify-around w-200  rounded-t-2xl h-20 bg-gray-300 place-content-center mt-2  ">
       <div className="flex gap-4 ">
-         <h2>Order placed
+         <h2>Order placed :
 10 April 2025</h2>
-      <h2>Total
+      <h2>Total: 
 ₹8,299.00
 </h2>
       <span>SHIP TO 
@@ -96,18 +77,19 @@ function Return() {
       <a href="" className='mx-2 text-blue-600'>Invoice</a>
     </div>
     </div>
-    <div className="flex justify-center items-center">
-      <div className="flex flex-col gap-5">
-        <div className="p-4">
+   
+            <div className="flex items-center justify-between relative h-70 w-200 border-2 p-2 rounded-b-2xl rounded-t-none">
+               <div className="flex justify-center items-center">
+      <div className="flex flex-col gap-2">
+        <div className="p-4  ">
           <h2 className='font-bold'>Delivered 12 April</h2>
       <p>Package was handed to resident</p>
         </div>
-            
-      <div className="flex ">
+              <div className="flex ">
         <img  className="w-20 h-20" src="https://m.media-amazon.com/images/I/81BGKLI+cWL._SS142_.jpg" alt="" />
         <div className="">
             <p className='hover:underline text-blue-600'>
-Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 |<br /> Segment Largest 6.88in 120Hz | 50MP Dual Camera | 18W Fast Charging</p>
+Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) <br />| Global Debut  SD 4s Gen 2 |<br /> Segment Largest  6.88in 120Hz <br />| 50MP Dual Camera | 18W Fast Charging</p>
 <p>Return window closed on 19 April 2025</p>
 <div className="mx-2 flex gap-2 mt-2">
   <button className='p-2 rounded-2xl text-black bg-yellow-400 border'>Buy it again</button><button className='p-2 rounded-2xl border'>View Your item</button>
@@ -115,9 +97,45 @@ Redmi A4 5G (Sparkle Purple, 4GB RAM, 64GB Storage) | Global Debut SD 4s Gen 2 |
       
 </div>
       </div>
+      <div className="rightdiv rounded-2xl gap-5 absolute mx-2 flex flex-col right-0">
+        <button className=' rounded-2xl px-2 text-x bg-yellow-400'>Get product support</button>
+        <button className='border outline-0 rounded-2xl  text-x '>Track package</button>
+        <button className='border outline-0 rounded-2xl  text-x '>Ask Product Question</button>
+        <button className='border outline-0 rounded-2xl  text-x '>Leave seller feedback</button>
+        <button className='border outline-0 rounded-2xl  text-x '>Leave delivery feedback</button>
+        <button className='border outline-0 rounded-2xl  text-x '>Write a product review</button>
+
+        
+      </div>
+            </div>
+   
+      
+      
       </div>
   
     </div>
+      
+    </div>
+    
+    <div className="siddiv  w-100 h-60 border right-10 top-1/2 ">
+       <h2 className='font-bold'>Customers also bought <br /> these digital items </h2> 
+
+    <div className=" flex justify-between items-center">
+      <img src="https://images-eu.ssl-images-amazon.com/images/I/31HvucLchNL._AC_UL150_SR150,150_.jpg" alt="" />
+   <div className="">
+       <p className='text-blue-600 hover:underline'>
+         Cancellation Protect charge <br />
+ <br />Travel Bookings <br />
+1 offer from ₹500
+      </p>
+      <button className='p-2 border rounded-2xl text-xs'>See all buying options
+</button>    </div>  
+    </div>
+
+    </div>
+    
+    
+   
    
          
          
