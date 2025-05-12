@@ -40,7 +40,7 @@ const Kitchenessentials = () => {
         <h2 className="text-lg font-bold text-gray-800">
           Up to 60% off | Kitchen essentials
         </h2>
-        <a href="#" className="text-blue-600 text-sm hover:underline"><Link to="/HomeData2">See all offers</Link>See all offers</a>
+        <a href="#" className="text-blue-600 text-sm hover:underline"><Link to="/HomeData2">See all offers</Link></a>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -53,7 +53,7 @@ const Kitchenessentials = () => {
           />
         ))}
       </div>
-
+ </Link>
   
       <button
         onClick={handlePrev}
@@ -68,7 +68,7 @@ const Kitchenessentials = () => {
         <BiRightArrowAlt />
 
       </button>
-      </Link>
+     
     </div>
 
 	</>

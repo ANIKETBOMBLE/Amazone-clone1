@@ -11,6 +11,7 @@ function SingleProduct() {
   const [product, setProduct] = useState(null);
   const { handleAddToCart } = useCart();
   const { handleAddToWishlist } = useWishlist();
+// const [message, setMessage] = useState(null);
 
   const navigate = useNavigate();
   const db = getFirestore();
@@ -52,6 +53,7 @@ function SingleProduct() {
       console.error(`Error adding to ${collectionName}:`, error);
     }
   }
+  
 
   if (!product) return <p className="p-4 text-center text-2xl text-black">Loading...</p>;
 

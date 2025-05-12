@@ -2,93 +2,87 @@ import React from 'react';
 
 function Footer() {
   return (
-    <>
-      <div className="bg-gray-900 text-white py-10 px-4">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 text-sm">
+    <footer className="bg-gray-900 text-white">
+      
+      <div className="max-w-6xl mx-auto px-6 py-12 grid gap-10 md:grid-cols-2 lg:grid-cols-3 text-sm">
+        
+        <ul className="space-y-5">
+          <li>
+            <a href="https://www.abebooks.com/" className="hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-500">
+              <h5 className="font-semibold text-white">AbeBooks</h5>
+              <p className="text-gray-400">Books, art<br />& collectibles</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter" className="hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-500">
+              <h5 className="font-semibold text-white">Amazon Web Services</h5>
+              <p className="text-gray-400">Scalable Cloud<br />Computing Services</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.audible.in/" className="hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-500">
+              <h5 className="font-semibold text-white">Audible</h5>
+              <p className="text-gray-400">Download<br />Audio Books</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.imdb.com/" className="hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-500">
+              <h5 className="font-semibold text-white">IMDb</h5>
+              <p className="text-gray-400">Movies, TV<br />& Celebrities</p>
+            </a>
+          </li>
+        </ul>
 
-          <ul className="space-y-4">
-            <li>
-              <a href="https://www.abebooks.com/" className="hover:underline">
-                <h5 className="font-semibold">AbeBooks</h5>
-                <span>Books, art<br />& collectibles</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=IN_amazonfooter" className="hover:underline">
-                <h5 className="font-semibold">Amazon Web Services</h5>
-                <span>Scalable Cloud<br />Computing Services</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.audible.in/" className="hover:underline">
-                <h5 className="font-semibold">Audible</h5>
-                <span>Download<br />Audio Books</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.imdb.com/" className="hover:underline">
-                <h5 className="font-semibold">IMDb</h5>
-                <span>Movies, TV<br />& Celebrities</span>
-              </a>
-            </li>
-          </ul>
-
-          <ul className="space-y-4">
-            <li>
-              <a href="https://www.shopbop.com/" className="hover:underline">
-                <h5 className="font-semibold">Shopbop</h5>
-                <span>Designer<br />Fashion Brands</span>
-              </a>
-            </li>
-            <li>
-              <a href="" className="hover:underline">
-                <h5 className="font-semibold">Amazon Business</h5>
-                <span>Everything For<br />Your Business</span>
-              </a>
-            </li>
-            <li>
-              <a href="" className="hover:underline">
-                <h5 className="font-semibold">Prime Now</h5>
-                <span>2-Hour Delivery<br />on Everyday Items</span>
-              </a>
-            </li>
-            <li>
-              <a href="" className="hover:underline">
-                <h5 className="font-semibold">Amazon Prime Music</h5>
-                <span>
-                  100 million songs, ad-free<br />
-                  Over 15 million podcast episodes
-                </span>
-              </a>
-            </li>
-          </ul>
-
-        </div>
+        
+        <ul className="space-y-5">
+          <li>
+            <a href="https://www.shopbop.com/" className="hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-500">
+              <h5 className="font-semibold text-white">Shopbop</h5>
+              <p className="text-gray-400">Designer<br />Fashion Brands</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-500">
+              <h5 className="font-semibold text-white">Amazon Business</h5>
+              <p className="text-gray-400">Everything For<br />Your Business</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-500">
+              <h5 className="font-semibold text-white">Prime Now</h5>
+              <p className="text-gray-400">2-Hour Delivery<br />on Everyday Items</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:underline focus:outline-none focus:ring-2 focus:ring-yellow-500">
+              <h5 className="font-semibold text-white">Amazon Prime Music</h5>
+              <p className="text-gray-400">
+                100 million songs, ad-free<br />
+                Over 15 million podcast episodes
+              </p>
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <div className="bg-gray-900 text-gray-400 text-xs py-4 px-4 border-t border-gray-700">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6 text-center">
-          <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1">
+      
+      <div className="border-t border-gray-700 py-6 px-6 text-xs text-gray-400">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-y-2 text-center">
+          <ul className="flex flex-wrap justify-center gap-4">
             <li>
-              <a href="" className="hover:underline">
-                Conditions of Use & Sale
-              </a>
+              <a href="#" className="hover:underline">Conditions of Use & Sale</a>
             </li>
             <li>
-              <a href="" className="hover:underline">
-                Privacy Notice
-              </a>
+              <a href="#" className="hover:underline">Privacy Notice</a>
             </li>
             <li>
-              <a href="" className="hover:underline">
-                Interest-Based Ads
-              </a>
+              <a href="#" className="hover:underline">Interest-Based Ads</a>
             </li>
           </ul>
-          <span className="mt-2 md:mt-0">© 1996–2025, Amazon.com, Inc. or its affiliates</span>
+          <span>© 1996–2025, Amazon.com, Inc. or its affiliates</span>
         </div>
       </div>
-    </>
+    </footer>
   );
 }
 

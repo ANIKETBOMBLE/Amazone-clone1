@@ -20,7 +20,7 @@ function Cart() {
               <p>Price: ₹{item.price}</p>
             </div>
             <button
-              className="bg-red-500 text-white px-4 py-1 rounded"
+              className="bg-red-500 text-white w-40 h-10  rounded"
               onClick={() => handleRemoveFromCart(item.id)}
             >
               Remove
