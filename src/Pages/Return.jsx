@@ -4,7 +4,10 @@ import HomeData from '../HomeData'
 import { Link } from 'react-router-dom'
 import { BiSolidChevronRight } from "react-icons/bi";
 import { TbSearch } from "react-icons/tb";
+import Loader from '../Componetus/Loader';
 function Return() {
+  
+  <Loader/> 
   return (
     <>
     

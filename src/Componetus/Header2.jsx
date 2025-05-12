@@ -16,6 +16,8 @@ function Header2() {
 
     {[
       { label: "MX Player", href: "https://www.mxplayer.in/" },
+       { label: "Today's Deal",href: "/HomeData2" },
+
       { label: "Sell" , href: "*"},
       { label: "Gift Cards",href: "*" },
       { label: "Amazon Pay",href: "*" },
@@ -25,7 +27,7 @@ function Header2() {
       { label: "Books" ,href: "*" },
       { label: "Home Improvement",href: "*" },
       { label: "Health, Household & Personal Care",href: "*" },
-      { label: "Today's Deal",href: "/HomeData2" },
+      // { label: "Today's Deal",href: "/HomeData2" },
       { label: "Browsing History",href: "*" },
       { label: "Customer Services",href: "*" },
     ].map((item, index) => (

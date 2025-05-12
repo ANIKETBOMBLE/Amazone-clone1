@@ -6,11 +6,13 @@ function DATA() {
   
 
 
+
   return (
     
     <>
-    {/* <Link to=''>  */}
+     
  <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6  absolute top-95   ">
+ 
   {productData.map((product, index) => (
     <div
       key={index}
@@ -29,15 +31,16 @@ function DATA() {
             className="w-fit h-24 object-cover rounded-md cursor-pointer " />
         ))}
         <div className="link">
-          <Link className='text-blue-500 hover:underline cursor-pointer' to="/HomeData2">{product.DATAF}</Link>
+          <Link className='text-blue-500 hover:underline cursor-pointer' to="/HomeData2" >{product.DATAF}</Link>
         </div>
       
         
       </div>
-    
+      
     </div>
+    
   ))}
-  
+
 </div>
 
     
