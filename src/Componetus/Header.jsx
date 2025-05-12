@@ -12,16 +12,26 @@ import { FaChevronDown } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { MdOutlineShoppingCart, MdLogout } from "react-icons/md";
 import { BsFillPersonFill } from "react-icons/bs";
-
-
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useAuth } from './AuthContext';
 import { auth } from './firebase';
 import { useCart } from './CartContext';
-function Header() {
+
+
+import { useWishlist } from './WishlistContext'; 
+
+
+
+
+
+
+
+function Header({searchTerm, setSearchTerm}) {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { cart } = useCart();
+    const { wishlist } = useWishlist();
+ 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
   const toggleDropdown = () =>{
@@ -32,6 +42,7 @@ function Header() {
     auth.signOut();
     navigate("/Login");
   }
+  
   
   
   
@@ -73,6 +84,8 @@ function Header() {
       <input
         type="text"
         placeholder="Search Amazon.in"
+        value={searchTerm}
+        onChange={(e)=> setSearchTerm(e.target.value)}
         className="flex-grow px-2 text-black bg-amber-50 focus:outline-none hover:border-3 hover:border-orange-400"
       />
       <button className="bg-orange-300 hover:bg-orange-400 p-2 text-black hover:border-3 hover:border-orange-400">
@@ -100,7 +113,7 @@ function Header() {
 
 
     <Link to="/Cart" className="relative flex items-center px-3 hover:border hover:border-white rounded">
-      <span className="absolute top-0 right-1 text-orange-400 text-xs">2</span>
+      <span className="absolute top-0 right-1 text-orange-400 text-xs">{cart.length}</span>
       <ShoppingCartIcon />
       <span className="ml-1">Cart</span>
     </Link>
@@ -109,8 +122,10 @@ function Header() {
       {user ? (
             <li className="mr-5 cursor-pointer relative">
               <div onClick={toggleDropdown} className="flex items-center">
-                <span className="mr-2"></span>
-                <AccountCircleIcon/>
+                <span className="mr-2">
+                    <AccountCircleIcon  />
+                </span>
+              
               </div>
               {isDropdownOpen && (
                 <ul className="absolute z-50 right-0 mt-2 bg-gray-200 shadow-md rounded w-40">
@@ -124,23 +139,14 @@ function Header() {
                       Wishlist{" "}
                       <p className="relative flex items-center">
                         <AiOutlineHeart title="Your Wishlist" className="" />
-                        <span className="absolute top-[-10px] right-[-10px] bg-rose-400 font-bold text-black rounded-full w-4 h-4 flex justify-center items-center text-xs">
-                          0
+                        <span className="absolute top-[-10px] right-[-10px] bg-orange-400 font-bold text-black rounded-full w-4 h-4 flex justify-center items-center text-xs">
+                          {wishlist.length}
+                         
                         </span>
                       </p>
                     </Link>
                   </li>
-                  <li className="p-2 hover:bg-gray-200 text-black relative">
-                    <Link to="/Cart" className="flex items-center gap-2">
-                      Cart{" "}
-                      <p className="relative flex items-center">
-                        <MdOutlineShoppingCart title="Your Cart" className="" />
-                        <span className="absolute top-[-10px] right-[-10px] bg-rose-400 font-bold text-black rounded-full w-4 h-4 flex justify-center items-center text-xs">
-                          {cart.length}
-                        </span>
-                      </p>
-                    </Link>
-                  </li>
+                 
                   <li className="p-2 hover:bg-gray-200 text-black relative flex items-center gap-2">
                    
                     <button onClick={handleLogout}>

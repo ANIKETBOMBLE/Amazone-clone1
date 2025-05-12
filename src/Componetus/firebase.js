@@ -18,13 +18,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app); // Auth service
 
-// Optional: Analytics setup
-let analytics;
-isSupported().then((yes) => {
-  if (yes) {
-    analytics = getAnalytics(app);
-  }
-});
+
 
 // Export named services
-export { app, auth, analytics };
+export { app, auth };

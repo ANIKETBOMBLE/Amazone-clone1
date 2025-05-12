@@ -26,10 +26,11 @@ import Login from './Login';
 import Register from './Register';
 // import HomeBanner from './Pages/HomeBanner';
 import ProtectedRoute from './Componetus/ProtectedRoute';
-import Wishlist from './Wishlist';
+// import Wishlist from './Wishlist';
 import Profile from './Pages/Profile'
 import HomeData2 from './Pages/HomeData2';
-
+import { WishlistProvider } from './Componetus/WishlistContext';
+import WishlistPage from './Wishlist'
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
             <Cart />
           </ProtectedRoute>
         ),
+      },
+      {
+        path: "/Header",
+        element: <Header/>
       }
       ,{
         path:"/Login",
@@ -61,7 +66,7 @@ const router = createBrowserRouter([
         path: "/wishlist",
         element: (
           <ProtectedRoute>
-            <Wishlist />
+            <WishlistPage />
           </ProtectedRoute>
         ),
       },
@@ -136,9 +141,12 @@ const router = createBrowserRouter([
 function App() {
   return (
     <AuthProvider>
+      
+      <WishlistProvider>
        <CartProvider>
     <RouterProvider router={router} />
        </CartProvider>
+         </WishlistProvider>
        </AuthProvider>
   )
 }

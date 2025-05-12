@@ -4,11 +4,14 @@ import instance from "./Componetus/axios";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
 import { useCart } from "./Componetus/CartContext";
 import { useAuth } from "./Componetus/AuthContext";
+import { useWishlist } from "./Componetus/WishlistContext";
 
 function SingleProduct() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const { handleAddToCart } = useCart();
+  const { handleAddToWishlist } = useWishlist();
+
   const navigate = useNavigate();
   const db = getFirestore();
   const { user } = useAuth(); 
@@ -36,6 +39,14 @@ function SingleProduct() {
    try {
       const docRef = doc(db, collectionName, `${user.uid}_${product.id}`);
       await setDoc(docRef, { ...product, userId: user.uid });
+      
+      if(collectionName === "Cart"){
+        handleAddToCart(product);
+      }
+      if (collectionName === "Wishlist") {
+  handleAddToWishlist(product); 
+}
+      
       console.log(`${product.title} added to ${collectionName}`);
     } catch (error) {
       console.error(`Error adding to ${collectionName}:`, error);

@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import { useAuth } from "../Componetus/AuthContext";
-import {  useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useState, useEffect} from "react";
 import { auth } from "./firebase";
 import { Link } from "react-router-dom";

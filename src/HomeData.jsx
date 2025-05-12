@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 
-function HomeData() {
+function HomeData({searchTerm}) {
   const [products, setProducts] = useState([]);
 
 
@@ -20,6 +20,8 @@ function HomeData() {
 	console.log(res.data.products);
 	setProducts(res.data.products);
   }
+  
+  
 
   
   

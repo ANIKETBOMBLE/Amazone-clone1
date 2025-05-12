@@ -16,7 +16,7 @@ function HomeData2() {
                         // https://fakestoreapi.in/api/products
   async function getData() {
 
-	const res = await instance.get("https://fakestoreapi.in/api/products");
+	const res = await instance.get("https://fakestoreapi.com/api/products");
 	console.log(res.data.products);
 	setProducts(res.data.products);
   }

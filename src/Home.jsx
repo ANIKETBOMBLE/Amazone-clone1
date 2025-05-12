@@ -9,8 +9,9 @@ import HomeData from './HomeData';
 import  YourB from './Pages/YourB'
 import instance from './Componetus/axios';
 // import Product from './Prodcut';
-
-function Home() {
+import Header from './Componetus/Header';
+import { Link } from 'react-router-dom';
+function Home({searchTerm}) {
   const images = [
     'https://m.media-amazon.com/images/I/81BKxaj0USL._SX3000_.jpg',
     'https://images-eu.ssl-images-amazon.com/images/G/31/INSLGW/90days2x._CB795748422_.jpg',
@@ -68,11 +69,11 @@ function Home() {
     <DATA/>
     <Kitchenessentials/>
     <Inspire/> 
-     <HomeData />
+     <HomeData searchTerm={searchTerm} />
     <Addmore/>
      <More/>
      
-        <HomeData  />
+        <HomeData searchTerm={searchTerm}  />
          <YourB/>
          
          
