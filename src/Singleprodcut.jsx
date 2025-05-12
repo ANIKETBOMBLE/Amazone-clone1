@@ -27,10 +27,10 @@ function SingleProduct() {
     }
   }
 
-  async function handeltoadd(collectionName, product) {
-    if (!user) {          
-      return navigate("/Login");
-      
+ async function handleAddToCollection(collectionName, product) {
+    if (!user) {
+      navigate("/Login");
+      return;
     }
 
    try {
@@ -78,7 +78,7 @@ function SingleProduct() {
      
         <button
           className="bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-2 px-4 rounded"
-          onClick={() => handeltoadd("/Cart", product)}
+          onClick={() => handleAddToCollection("Cart", product)}
           
         >
           
@@ -86,7 +86,7 @@ function SingleProduct() {
         </button>
         <button
           className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded"
-          onClick={() => handeltoadd("/Wishlist", product)}
+          onClick={() => handleAddToCollection("Wishlist", product)}
           
         >
           Add to WishList 
