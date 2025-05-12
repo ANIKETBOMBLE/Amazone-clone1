@@ -77,7 +77,10 @@ function Header() {
 
     <div className="hidden sm:flex items-center px-2 cursor-pointer" title="Profile">
       <Link to="/Profile" >   <AccountCircleIcon sx={{ fontSize: 36 }} /> </Link>
-    
+    {/* <div className="hidden">Wishlist</div> */}
+    </div>
+    <div className="">
+      <Link to="/Wishlist"> Wishlist</Link>
     </div>
   </nav>
 </header>

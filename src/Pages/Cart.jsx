@@ -4,6 +4,7 @@ import { FaStar } from 'react-icons/fa';
 import YourB from './YourB';
 import HomeData from '../HomeData';
 
+
 function Cart() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -59,52 +60,51 @@ function Cart() {
                     className="p-2 rounded-2xl text-black bg-yellow-400 mt-1 hover:underline cursor-pointer"
                     onClick={() => addToCart(item)}
                   >
-                    Add to cart
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
+                     Add to cart
+                 </button>
+                 </div>
+               </div>
+             ))}
+           </div> 
+      )} 
      
-        <div className="flex justify-end w-full mt-8">
-          <div className="sidebar p-4 rounded-2xl w-80 text-center bg-gray-200">
-            <h2 className="font-bold text-start">You might also like</h2>
-            <div className="flex flex-col gap-4">
-              {cartItems.slice(0, 3).map((item) => (
-                <div
-                  key={item.id}
-                  className="flex w-72 h-45 border rounded-2xl gap-2 items-center"
-                >
-                  <img
-                    className="w-30 h-20 object-cover ml-2"
-                    src={item.image}
-                    alt={item.name}
-                  />
-                  <div className="text-xs text-start">
-                    <h2 className="text-blue-500 hover:underline p-2">{item.name}</h2>
-                    <span className="text-orange-400 flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <FaStar key={i} className={i < item.rating ? 'text-yellow-400' : ''} />
-                      ))}
-                    </span>
-                    <span className="font-semibold">{item.price}</span>
-                    <p>
-                      Get it by <b>Tuesday, May 13</b>
-                      <br /> FREE Delivery by Amazon
-                    </p>
-                    <button className="p-2 rounded-2xl text-black bg-yellow-400 mt-1 hover:underline cursor-pointer">
-                      Add to cart
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
+         <div className="flex justify-end w-full mt-8">
+           <div className="sidebar p-4 rounded-2xl w-80 text-center bg-gray-200">
+             <h2 className="font-bold text-start">You might also like</h2>
+             <div className="flex flex-col gap-4">
+               {cartItems.slice(0, 3).map((item) => (
+                 <div
+                   key={item.id}
+                   className="flex w-72 h-45 border rounded-2xl gap-2 items-center"
+                 >
+                   <img
+                     className="w-30 h-20 object-cover ml-2"
+                     src={item.image}
+                     alt={item.name}
+                   />
+                   <div className="text-xs text-start">
+                     <h2 className="text-blue-500 hover:underline p-2">{item.name}</h2>
+                     <span className="text-orange-400 flex gap-1">
+                       {[...Array(5)].map((_, i) => (
+                         <FaStar key={i} className={i < item.rating ? 'text-yellow-400' : ''} />
+                       ))}
+                     </span>
+                     <span className="font-semibold">{item.price}</span>
+                     <p>
+                       Get it by <b>Tuesday, May 13</b>
+                       <br /> FREE Delivery by Amazon
+                     </p>
+                     <button className="p-2 rounded-2xl text-black bg-yellow-400 mt-1 hover:underline cursor-pointer">
+                       Add to cart
+                     </button>
+                   </div>
+                 </div>
+               ))}
+             </div>
+           </div>
+         </div>
+       </div>
+  
     
       <HomeData />
       <YourB />

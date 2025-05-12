@@ -8,7 +8,7 @@ import Header from './Componetus/Header';
 import Footer from './Componetus/Footer';
 import Return from './Pages/Return';
 import Cart from './Pages/Cart'
-import Profile from './Pages/Profile';
+// import Profile from './Pages/Profile';
 import Header2 from './Componetus/Header2';
 import DATA from './Pages/DATA';
 import Kitchenessentials from './Pages/Kitchenessentials'
@@ -21,7 +21,14 @@ import YourB from './Pages/YourB';
 // import Singleproduct from './Singleprodcut';
 import CartProvider from './Componetus/CartContext';
 import SingleProduct from './Singleprodcut';
+import{AuthProvider}  from './Componetus/AuthContext';
+import Login from './Login';
+import Register from './Register';
 // import HomeBanner from './Pages/HomeBanner';
+import ProtectedRoute from './Componetus/ProtectedRoute';
+import Wishlist from './Wishlist';
+import Profile from './Pages/Profile'
+import HomeData2 from './Pages/HomeData2';
 
 
 const router = createBrowserRouter([
@@ -36,15 +43,27 @@ const router = createBrowserRouter([
         path:"/Return",
         element:<Return />
       },{
-        path:"/Cart",
-        element:<Cart/>
-      },{
-        path:"/Profile",
-        element: <Profile/>
+        path: "/Cart",
+        element: (
+          <ProtectedRoute>
+            <Cart />
+          </ProtectedRoute>
+        ),
+      }
+      ,{
+        path:"/Login",
+        element: <Login/>
       },
       {
         path:"/Header2",
         element: <Header2/>
+      },{
+        path: "/wishlist",
+        element: (
+          <ProtectedRoute>
+            <Wishlist />
+          </ProtectedRoute>
+        ),
       },
       {
         path:"/DATA",
@@ -65,17 +84,31 @@ const router = createBrowserRouter([
         path:"/Addmore",
         element: <Addmore/>
       },{
-        path:"/",
+        path:"/HomeData",
         element: <HomeData />
       },
       ,{
         path : "/product/:id",element: <SingleProduct />
+      },{
+        path: "/Register",
+        element: <Register/>
+      },{
+        path:"/HomeData2",
+        element: <HomeData2/>
       },
       
       
       {
         path:"/YourB",
         element: <YourB/>
+      },
+      {
+        path: "/Profile",
+        element: (
+      <ProtectedRoute>
+          <Profile />
+      </ProtectedRoute>
+        )
       },
            {
       path:"*",
@@ -102,9 +135,11 @@ const router = createBrowserRouter([
 
 function App() {
   return (
+    <AuthProvider>
        <CartProvider>
     <RouterProvider router={router} />
        </CartProvider>
+       </AuthProvider>
   )
 }
 

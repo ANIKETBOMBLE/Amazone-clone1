@@ -28,7 +28,7 @@ function Addmore() {
             className="w-fit h-24 object-cover rounded-md cursor-pointer " />
         ))}
         <div className="link">
-          <Link className='text-blue-500 hover:underline cursor-pointer' to="/*">{product.DATAF}</Link>
+          <Link className='text-blue-500 hover:underline cursor-pointer' to="/HomeData2">{product.DATAF}</Link>
         </div>
       
         

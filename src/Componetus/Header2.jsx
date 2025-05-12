@@ -9,7 +9,9 @@ function Header2() {
     
     <div className="All flex items-center gap-1 border border-transparent hover:border-white rounded px-2 py-1 transition">
       <IoMenu className="h-5 w-5" />
-      <span>All</span>
+      <Link to="/HomeData2"><span>All</span>
+      </Link>
+      
     </div>
 
     {[
@@ -17,13 +19,13 @@ function Header2() {
       { label: "Sell" , href: "*"},
       { label: "Gift Cards",href: "*" },
       { label: "Amazon Pay",href: "*" },
-      { label: "Buy Again",href: "*" },
+      { label: "Buy Again",href: "/HomeData2" },
       { label: "AmazonBasics" ,href: "*" },
       { label: "Gift ideas" ,href: "*" },
       { label: "Books" ,href: "*" },
       { label: "Home Improvement",href: "*" },
       { label: "Health, Household & Personal Care",href: "*" },
-      { label: "Today's Deal",href: "*" },
+      { label: "Today's Deal",href: "/HomeData2" },
       { label: "Browsing History",href: "*" },
       { label: "Customer Services",href: "*" },
     ].map((item, index) => (
