@@ -18,7 +18,7 @@ function ProtectedRoute({ children }) {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []); //mounting
+  }, []);
 
   if (isLoading)
     return (
